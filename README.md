@@ -72,3 +72,33 @@ curl -X GET "http://localhost:8000/tasks/1"
 	•	Job Scheduler (Celery): Executes background tasks.
 	•	Microservices Architecture: API and worker services run independently.
 	•	Dockerized: Easy deployment with docker-compose up.
+
+
+## Additional feature.
+
+### 1. Using DBeaver (Cross-Platform GUI)
+
+DBeaver is a free, open-source database management tool.
+
+Step 1: Install DBeaver
+
+Download from [Download DBeaver](https://dbeaver.io/download/).
+
+Step 2: Connect to PostgreSQL
+```markdown
+	•	Open DBeaver.
+	•	Click New Database Connection → Select PostgreSQL.
+	•	Enter:
+	•	Host: localhost (or host.docker.internal for macOS/Windows)
+	•	Port: 5432
+	•	Database: Your database name
+	•	Username: postgres
+	•	Password: Your password
+	•	Click Test Connection, then Finish.
+```
+
+Step 3: View the task table in the DBeaver
+
+![dbeaver](image.png)
+
+Step 4: Start creating a new task with postman and results are visible in the task table.
