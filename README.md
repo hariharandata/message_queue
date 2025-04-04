@@ -53,7 +53,7 @@ docker-compose up --build
 
 3. Test API Endpoints
 
-You can interact with the API using curl or any API client like Postman.
+You can interact with the API using curl or any API client like Postman or shell command in bash.sh.
 
 Create a new task:
 
@@ -72,3 +72,26 @@ curl -X GET "http://localhost:8000/tasks/1"
 	•	Job Scheduler (Celery): Executes background tasks.
 	•	Microservices Architecture: API and worker services run independently.
 	•	Dockerized: Easy deployment with docker-compose up.
+
+
+## Additional work
+
+Using DBeaver (Cross-Platform GUI)
+
+DBeaver is a free, open-source database management tool.
+
+Step 1: Install [Download DBeaver](https://dbeaver.io/download/)
+
+Download from DBeaver website.
+Step 2: Connect to PostgreSQL
+```markdown
+	•	Open DBeaver.
+	•	Click New Database Connection → Select PostgreSQL.
+	•	Enter:
+	•	Host: localhost (or host.docker.internal for macOS/Windows)
+	•	Port: 5432
+	•	Database: Your database name
+	•	Username: postgres
+	•	Password: Your password
+	•	Click Test Connection, then Finish.
+```
