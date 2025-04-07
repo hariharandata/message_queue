@@ -102,10 +102,10 @@ curl -X GET "http://localhost:8000/tasks/1"
               |
     (e.g., process image, store in DB)
 ```
-When you’re using Celery with RabbitMQ, you don’t need to manually write code to declare queues or publish messages—Celery handles all of that for you under the hood
+
 #### So yes, RabbitMQ “just works” with Celery
 
-##### Thanks to Celery’s abstraction:
+#### Thanks to Celery’s abstraction:
 	•	You don’t need to use low-level RabbitMQ code like pika.
 	•	RabbitMQ handles message passing, queuing, routing, and retention.
 	•	Celery handles task orchestration, queue declaration, and execution.
