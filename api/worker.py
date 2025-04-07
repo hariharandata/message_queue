@@ -9,7 +9,7 @@ celery = Celery("worker", # the name of this Celery instance.
     backend="rpc://" # The backend is where task results are stored.
 )
 
-@celery.task
+@celery.task # Celery will automatically declare a queue (e.g., a default queue called celery) in RabbitMQ if it doesn’t exist
 def process_task(task_id: int):
     """
     Process a task by updating its status to 'processing', simulating a long running task,
