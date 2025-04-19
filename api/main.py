@@ -36,7 +36,8 @@ def create_task(task: TaskCreate, db: Session = Depends(get_db)):
     new_task = Task(name=task.name, status="pending")
     db.add(new_task)
     db.commit()
-    # db.refresh(new_task) tells SQLAlchemy to reload the object’s data from the database, ensuring that all the fields (especially auto-generated ones) are up-to-date after a commit().
+    # db.refresh(new_task) tells SQLAlchemy to reload the object’s data from the database,
+    # ensuring that all the fields (especially auto-generated ones) are up-to-date after a commit().
     db.refresh(new_task)
 
     # Send task to RabbitMQ via Celery
