@@ -14,10 +14,8 @@ def get_db():
 
     Yields:
         SessionLocal: The database session.
-
     """
     db = SessionLocal()
-    print("__________Opening a new session____________")
     try:
         yield db
     finally:
